@@ -37,8 +37,12 @@ public class DesignShaurmaController {
 
         for (Ingredient.Type type : types) {
             model.addAttribute(type.toString().toLowerCase(),
-                    filterByType(ingredients, type))
+                    filterByType(ingredients, type));
         }
+
+        model.addAttribute("design", new Taco());
+
+        return "design";
     }
 
 
